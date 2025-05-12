@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const dotenv = require('dotenv');
 const { askOpenRouter } = require('./api');
 const cors = require ('cors')
@@ -18,9 +17,9 @@ app.use(
 
 app.use(express.json());
 
-app.get("/", (req,res) => {
-  res.send("Hello")
-})
+// app.get("/", (req,res) => {
+//   res.send("Hello")
+// })
 
 app.post('/api/ask', async (req, res) => {
   const { message } = req.body;
