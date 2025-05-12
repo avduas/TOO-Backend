@@ -18,6 +18,10 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req,res) => {
+  res.send("Hello")
+})
+
 app.post('/api/ask', async (req, res) => {
   const { message } = req.body;
   if (!message) return res.status(400).json({ error: 'Missing message' });
@@ -32,5 +36,5 @@ app.post('/api/ask', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+console.log(`Example app listening on port ${PORT}`)
 });
