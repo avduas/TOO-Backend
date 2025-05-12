@@ -15,8 +15,6 @@ async function askOpenRouter(userMessage) {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:3000",
-          "X-Title": "Local Chat Client",
         },
       }
     );
